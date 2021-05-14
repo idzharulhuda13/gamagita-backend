@@ -15,11 +15,3 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-
-// Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
-//     return view('welcome');
-// })->name('welcome');
-
-// Route::get('/test', function () {
-//     return view('pages.dashboard');
-// });
