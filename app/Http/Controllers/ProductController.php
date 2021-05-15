@@ -68,7 +68,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Products::findOrFail($id);
+
+        return view('pages.products.edit')->with([
+            'item' => $item
+        ]);
     }
 
     /**
@@ -78,9 +82,15 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->name);
+
+        $item = Products::findOrFail($id);
+        $item->update($data);
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -91,6 +101,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Products::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('products.index');
     }
 }
