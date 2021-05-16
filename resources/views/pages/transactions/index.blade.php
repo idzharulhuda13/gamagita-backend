@@ -17,7 +17,6 @@
                                         <th>Nama</th>
                                         <th>Email</th>
                                         <th>Nomor</th>
-                                        <th>Alamat</th>
                                         <th>Total Transaksi</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -33,7 +32,6 @@
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->number }}</td>
-                                            <td>{{ $item->address }}</td>
                                             <td>${{ $item->transaction_total }}</td>
                                             <td>
                                                 @if ($item->transaction_status == 'PENDING')
