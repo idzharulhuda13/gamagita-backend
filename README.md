@@ -11,3 +11,8 @@ check .env file
 php artisan serve
 check your route for connecting with web-gamagita-id
 ```
+you can login with this account
+```
+email : gamagita.id@gmail.com
+pass  : 12345678
+```
