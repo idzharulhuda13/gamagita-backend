@@ -1,4 +1,4 @@
-#PROJECT SETUP
+## PROJECT SETUP
 gh repo clone idzharulhuda13/gamagita-backend
 cd gamagita-backend
 npm install
