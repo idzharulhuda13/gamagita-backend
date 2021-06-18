@@ -3,7 +3,7 @@
 gh repo clone idzharulhuda13/gamagita-backend
 cd gamagita-backend
 npm install
-import the prepared database
+import the prepared database (gamagita-id.sql)
 check .env file
 ```
 ## run gamagita-backend
